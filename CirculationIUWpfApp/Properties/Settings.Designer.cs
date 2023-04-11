@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CirculationIUWpfApp.Properties
+namespace UIWpfApp.Properties
 {
 
 
