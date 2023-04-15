@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UIWpfApp.Model;
+using UIWpfApp.ViewModel;
 
 namespace UIWpfApp
 {
@@ -20,9 +22,37 @@ namespace UIWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly MainViewModel _viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+            _viewModel = new MainViewModel();
+            this.DataContext = _viewModel;
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            _viewModel.OptionOne=true;
+            _viewModel.OptionTwo=false;
+            _viewModel.OptionThree=false;
+            _viewModel.Update();
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            _viewModel.OptionOne = false;
+            _viewModel.OptionTwo = true;
+            _viewModel.OptionThree = false;
+            _viewModel.Update();
+        }
+
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            _viewModel.OptionOne = false;
+            _viewModel.OptionTwo = false;
+            _viewModel.OptionThree = true;
+            _viewModel.Update();
         }
     }
 }

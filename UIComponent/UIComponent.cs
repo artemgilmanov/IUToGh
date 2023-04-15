@@ -1,13 +1,18 @@
+using UIWpfApp.ViewModel;
 using Grasshopper;
 using Grasshopper.Kernel;
 using Rhino.Geometry;
 using System;
 using System.Collections.Generic;
+using UIWpfApp;
+using UIWpfApp.Model;
 
 namespace UIComponent
 {
     public class UIComponent : GH_Component
     {
+        private MainWindow _mainUIPanel;
+
         /// <summary>
         /// Each implementation of GH_Component must provide a public 
         /// constructor without any arguments.
@@ -34,6 +39,9 @@ namespace UIComponent
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
+            pManager.AddBooleanParameter("OptionOne", "OOne", "OptionOne", GH_ParamAccess.item);
+            pManager.AddBooleanParameter("OptionTwo", "OTwo", "OptionTwo", GH_ParamAccess.item);
+            pManager.AddBooleanParameter("OptionThree", "OThree", "OptionThree", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -43,6 +51,25 @@ namespace UIComponent
         /// to store data in output parameters.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
+            if (!(_mainUIPanel?.DataContext is MainViewModel mp)) return;
+            DA.SetData(0, mp.OptionOne);
+            DA.SetData(1, mp.OptionTwo);
+            DA.SetData(2, mp.OptionThree);
+
+            mp.UpdateDefinition(() => ExpireSolution(true));
+        }
+
+        public override void CreateAttributes()
+        {
+            m_attributes = new UIComponentAttributes(this);
+        }
+
+        public void DisplayWindows()
+        {
+            _mainUIPanel = new MainWindow();
+            _mainUIPanel.Show();
+            if (!(_mainUIPanel.DataContext is MainViewModel mp)) return;
+            mp.UpdateDefinition(() => ExpireSolution(true));
         }
 
         /// <summary>
