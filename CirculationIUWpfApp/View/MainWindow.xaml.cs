@@ -34,23 +34,18 @@ namespace UIWpfApp
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             _viewModel.OptionOne=true;
-            _viewModel.OptionTwo=false;
-            _viewModel.OptionThree=false;
+           
             _viewModel.Update();
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            _viewModel.OptionOne = false;
             _viewModel.OptionTwo = true;
-            _viewModel.OptionThree = false;
             _viewModel.Update();
         }
 
         private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
-            _viewModel.OptionOne = false;
-            _viewModel.OptionTwo = false;
             _viewModel.OptionThree = true;
             _viewModel.Update();
         }
