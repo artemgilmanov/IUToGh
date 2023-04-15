@@ -14,7 +14,7 @@ namespace UIWpfApp.Model
     public class UIInputs
     {
         public bool OptionOne { get; set; } = false;
-        public bool OptionTwo { get; set; } = true;
+        public bool OptionTwo { get; set; } = false;
         public bool OptionThree { get; set; } = false;
     }
 }
