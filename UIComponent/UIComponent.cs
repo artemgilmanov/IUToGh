@@ -39,9 +39,14 @@ namespace UIComponent
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddBooleanParameter("OptionOne", "OOne", "OptionOne", GH_ParamAccess.item);
-            pManager.AddBooleanParameter("OptionTwo", "OTwo", "OptionTwo", GH_ParamAccess.item);
-            pManager.AddBooleanParameter("OptionThree", "OThree", "OptionThree", GH_ParamAccess.item);
+            pManager.AddBooleanParameter("GroupOneOptionOne", "G1O1", "GroupOneOptionOne", GH_ParamAccess.item);
+            pManager.AddBooleanParameter("GroupOneOptionTwo", "G1O2", "GroupOneOptionTwo", GH_ParamAccess.item);
+            pManager.AddBooleanParameter("GroupOneOptionThree", "G1O3", "GroupOneOptionThree", GH_ParamAccess.item);
+
+            pManager.AddBooleanParameter("GroupTwoOptionOne", "G2O1", "GroupTwoOptionOne", GH_ParamAccess.item);
+            pManager.AddBooleanParameter("GroupTwiOptionTwo", "G2O2", "GroupTwoOptionTwo", GH_ParamAccess.item);
+
+
         }
 
         /// <summary>
@@ -52,9 +57,12 @@ namespace UIComponent
         protected override void SolveInstance(IGH_DataAccess DA)
         {
             if (!(_mainUIPanel?.DataContext is MainViewModel mp)) return;
-            DA.SetData(0, mp.OptionOne);
-            DA.SetData(1, mp.OptionTwo);
-            DA.SetData(2, mp.OptionThree);
+            DA.SetData(0, mp.GroupOneOptionOne);
+            DA.SetData(1, mp.GroupOneOptionTwo);
+            DA.SetData(2, mp.GroupOneOptionThree);
+
+            DA.SetData(3, mp.GroupTwoOptionOne);
+            DA.SetData(4, mp.GroupTwoOptionTwo);
 
             mp.UpdateDefinition(() => ExpireSolution(true));
         }

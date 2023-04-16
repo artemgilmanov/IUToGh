@@ -5,9 +5,12 @@ namespace UIWpfApp.ViewModel
 {
     public class MainViewModel:BaseViewModel
     {
-        private bool _optionOne;
-        private bool _optionTwo;
-        private bool _optionThree;
+        private bool _groupOneOptionOne;
+        private bool _groupOneOptionTwo;
+        private bool _groupOneOptionThree;
+
+        private bool _groupTwoOptionOne;
+        private bool _groupTwoOptionTwo;
 
         public Action Update;
 
@@ -18,33 +21,50 @@ namespace UIWpfApp.ViewModel
             UIInputs = new UIInputs();
         }
 
-        public bool OptionOne
+        public bool GroupOneOptionOne
         {
-            get => _optionOne;
+            get => _groupOneOptionOne;
             set
             {
-                _optionOne = value;
-                OnPropertyChanged("OptionOne");
+                _groupOneOptionOne = value;
+                OnPropertyChanged("GroupOneOptionOne");
+            }
+        }
+        public bool GroupOneOptionTwo
+        {
+            get => _groupOneOptionTwo;
+            set
+            {
+                _groupOneOptionTwo = value;
+                OnPropertyChanged("GroupOneOptionTwo");
+            }
+        }
+        public bool GroupOneOptionThree
+        {
+            get => _groupOneOptionThree;
+            set
+            {
+                _groupOneOptionThree = value;
+                OnPropertyChanged("GroupOneOptionThree");
             }
         }
 
-        public bool OptionTwo
+        public bool GroupTwoOptionOne
         {
-            get => _optionTwo;
+            get => _groupTwoOptionOne;
             set
             {
-                _optionTwo = value;
-                OnPropertyChanged("OptionTwo");
+                _groupTwoOptionOne = value;
+                OnPropertyChanged("GroupTwoOptionOne");
             }
         }
-
-        public bool OptionThree
+        public bool GroupTwoOptionTwo
         {
-            get => _optionThree;
+            get => _groupTwoOptionTwo;
             set
             {
-                _optionThree = value;
-                OnPropertyChanged("OptionThree");
+                _groupTwoOptionTwo = value;
+                OnPropertyChanged("GroupTwoOptionTwo");
             }
         }
 
