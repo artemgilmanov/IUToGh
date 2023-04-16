@@ -8,25 +8,98 @@
         Title="TestProject" Height="520" Width="370">
     <Border Padding="10">
         <StackPanel>
+            <!--Header one-->
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Control One" Margin="5 10 5 10" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+            <!--Value inputs group one-->
+            <Grid Background="#FFE9E9E9">
+                <!--Grid-->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                
-                <!--OptionOne, Two, Three data-->
-                <TextBlock Text="Control One" Margin="5  0 5 10" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                <RadioButton IsChecked="False" Margin="5 0 0 0" Grid.Row="1" Grid.Column="0" Checked="RadioButton_Checked"> Option 1 </RadioButton>
-                <RadioButton IsChecked="False" Margin=" 5 0 0 0" Grid.Row="1" Grid.Column="1" Checked="RadioButton_Checked_1"> Option 2 </RadioButton>
-                <RadioButton IsChecked="False" Margin="5 0 0 0"  Grid.Row="1" Grid.Column="2" Checked="RadioButton_Checked_2"> Option 3 </RadioButton>
-                <!--<TextBox Margin="0 0 5 0" Grid.Row="1" Grid.Column="0" Text="{Binding Path=Bay, Mode=OneWayToSource}" Padding="2"/>-->
+                <!-- Value one, rwo, three, four, five -->
+                <TextBlock Text="V1" Margin="5 5 5 5" Grid.Row="0" Grid.Column="0"/>
+                <TextBox Margin="5 5 5 5" Grid.Row="1" Grid.Column="0"  Text="{Binding Path=V1, Mode=OneWayToSource}" Padding="2"/>
 
+                <TextBlock Text="V2" Margin="5 5 5 5" Grid.Row="0" Grid.Column="1"/>
+                <TextBox Margin="5 5 5 5" Grid.Row="1" Grid.Column="1"  Text="{Binding Path=V2, Mode=OneWayToSource}" Padding="2"/>
+
+                <TextBlock Text="V3" Margin="5 5 5 5" Grid.Row="0" Grid.Column="2"/>
+                <TextBox Margin="5 5 5 5" Grid.Row="2" Grid.Column="2"  Text="{Binding Path=V3, Mode=OneWayToSource}" Padding="2"/>
+
+                <TextBlock Text="V4" Margin="5 5 5 5" Grid.Row="0" Grid.Column="3"/>
+                <TextBox Margin="5 5 5 5" Grid.Row="2" Grid.Column="3"  Text="{Binding Path=V4, Mode=OneWayToSource}" Padding="2"/>
+
+                <TextBlock Text="V5" Margin="5 5 5 5" Grid.Row="0" Grid.Column="4"/>
+                <TextBox Margin="5 5 5 5" Grid.Row="2" Grid.Column="4"  Text="{Binding Path=V5, Mode=OneWayToSource}" Padding="2"/>
+                <Canvas Grid.Row="1"/>
+            </Grid>
+
+            <!--Header two-->
+            <Grid Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Control Two" Margin="5 10 5 10" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+            <!--Options group one-->
+            <Grid Background="#FFE9E9E9">
+                <!--Grid-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--Options-->
+                <RadioButton IsChecked="False" Margin="5 5 5 5" Grid.Row="1" Grid.Column="0" Checked="RadioButton_Checked" HorizontalAlignment="Center"> Option 1 </RadioButton>
+                <RadioButton IsChecked="False" Margin="5 5 5 5" Grid.Row="1" Grid.Column="1" Checked="RadioButton_Checked_1" HorizontalAlignment="Center"> Option 2 </RadioButton>
+                <RadioButton IsChecked="False" Margin="5 5 5 5"  Grid.Row="1" Grid.Column="2" Checked="RadioButton_Checked_2" HorizontalAlignment="Center">Option 3</RadioButton>
+            </Grid>
+
+            <!--Header three-->
+            <Grid Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Control Three" Margin="5 10 5 10" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+            <!--Options group one-->
+            <Grid Background="#FFE9E9E9">
+                <!--Grid-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--Options-->
+                <RadioButton IsChecked="False" Margin="5 5 5 5" Grid.Row="1" Grid.Column="0" Checked="RadioButton_Checked" HorizontalAlignment="Center">Option 1</RadioButton>
+                <RadioButton IsChecked="False" Margin="5 5 5 5" Grid.Row="1" Grid.Column="1" Checked="RadioButton_Checked_1" HorizontalAlignment="Center">Option 2</RadioButton>
             </Grid>
         </StackPanel>
         
