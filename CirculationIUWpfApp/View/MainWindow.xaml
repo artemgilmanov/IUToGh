@@ -76,6 +76,7 @@
             <Button Background="White" 
                     FontWeight="Normal"  
                     x:Name="PointCreation" 
+                    Click="PointCreation_Click"  
                     Margin="10 10 10 0">
                 Calculate
                 <Button.Resources>
