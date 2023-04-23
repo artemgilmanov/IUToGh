@@ -72,7 +72,18 @@
                          Grid.Row="2" Grid.Column="4"
                          Text="{Binding Path=V5, Mode=OneWayToSource}" />
             </Grid>
-
+            
+            <Button Background="White" 
+                    FontWeight="Normal"  
+                    x:Name="PointCreation" 
+                    Margin="10 10 10 0">
+                Calculate
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             <!--Header two-->
             <Grid Background="White">
                 <Grid.ColumnDefinitions>
