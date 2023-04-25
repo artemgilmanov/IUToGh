@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using UIWpfApp.ViewModel;
 
-namespace UIWpfApp
+namespace UIWpfApp.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -62,6 +62,7 @@ namespace UIWpfApp
 
         private void PointCreation_Click(object sender, RoutedEventArgs e)
         {
+
 
         }
     }

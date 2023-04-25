@@ -13,7 +13,7 @@ namespace UIWpfApp.Model
 
     public class UIInputs
     {
-        public string valuesString { get; set; } = string.Empty;
+        public string ValuesString { get; set; } = string.Empty;
 
         public bool GroupOneOptionOne { get; set; } = false;
         public bool GroupOneOptionTwo { get; set; } = false;
@@ -21,6 +21,12 @@ namespace UIWpfApp.Model
 
         public bool GroupTwoOptionOne { get; set; } = false;
         public bool GroupTwoOptionTwo { get; set; } = false;
+
+        public int ValueOne { get; set; } = 30;
+        public int ValueTwo { get; set; } = 30;
+        public int ValueThree { get; set; } = 20;
+        public int ValueFour { get; set; } = 15;
+        public int ValueFive { get; set; } = 5;
 
 
     }
