@@ -62,7 +62,9 @@ namespace UIWpfApp.View
 
         private void PointCreation_Click(object sender, RoutedEventArgs e)
         {
+            _viewModel.GenerateValuesString();
 
+            _viewModel.Update();
 
         }
     }

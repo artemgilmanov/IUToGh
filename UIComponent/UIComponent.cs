@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using UIWpfApp;
 using UIWpfApp.Model;
+using UIWpfApp.View;
 
 namespace UIComponent
 {
@@ -46,6 +47,9 @@ namespace UIComponent
             pManager.AddBooleanParameter("GroupTwoOptionOne", "G2O1", "GroupTwoOptionOne", GH_ParamAccess.item);
             pManager.AddBooleanParameter("GroupTwiOptionTwo", "G2O2", "GroupTwoOptionTwo", GH_ParamAccess.item);
 
+            pManager.AddTextParameter("StringOutput", "SO", "StringOutput", GH_ParamAccess.item);
+
+
 
         }
 
@@ -63,6 +67,9 @@ namespace UIComponent
 
             DA.SetData(3, mp.GroupTwoOptionOne);
             DA.SetData(4, mp.GroupTwoOptionTwo);
+
+            DA.SetData(5, mp.ValuesString);
+
 
             mp.UpdateDefinition(() => ExpireSolution(true));
         }

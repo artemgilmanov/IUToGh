@@ -19,6 +19,7 @@ namespace UIWpfApp.ViewModel
         private int _valueThree;
         private int _valueFour;
         private int _valueFive;
+        private string _valuesString = string.Empty;
 
         public Action Update;
 
@@ -78,7 +79,7 @@ namespace UIWpfApp.ViewModel
 
         public int ValueOne
         {
-            get => _valueOne;
+            get => UIInputs.ValueOne;
             set
             {
                 _valueOne = value;
@@ -87,7 +88,7 @@ namespace UIWpfApp.ViewModel
         }
         public int ValueTwo
         {
-            get => _valueTwo;
+            get => UIInputs.ValueTwo;
             set
             {
                 _valueTwo = value;
@@ -96,7 +97,7 @@ namespace UIWpfApp.ViewModel
         }
         public int ValueThree
         {
-            get => _valueThree;
+            get => UIInputs.ValueThree;
             set
             {
                 _valueThree = value;
@@ -106,7 +107,7 @@ namespace UIWpfApp.ViewModel
 
         public int ValueFour
         {
-            get => _valueFour;
+            get => UIInputs.ValueFour;
             set
             {
                 _valueFour = value;
@@ -116,7 +117,7 @@ namespace UIWpfApp.ViewModel
 
         public int ValueFive
         {
-            get => _valueFive;
+            get => UIInputs.ValueFive;
             set
             {
                 _valueFive = value;
@@ -124,12 +125,21 @@ namespace UIWpfApp.ViewModel
             }
         }
 
-        public string GenerateValuesString()
+        public string ValuesString
         {
-            var valuesList = new List<int> { _valueOne, _valueTwo, _valueThree, _valueFour, _valueFive };
-            var vluesString = String.Join("-", valuesList);
+            get => _valuesString;
+            set
+            {
+                _valuesString = value;
+                OnPropertyChanged("ValuesString");
+            }
+        }
 
-            return vluesString;
+        public void GenerateValuesString()
+        {
+            var valuesList = new List<int> { ValueOne, ValueTwo, ValueThree, ValueFour, ValueFive };
+            ValuesString = String.Join("-", valuesList);
+
         }
 
         public void UpdateDefinition(Action a)
