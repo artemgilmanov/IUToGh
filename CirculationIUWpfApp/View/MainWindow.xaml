@@ -42,35 +42,35 @@
                            Grid.Row="0" Grid.Column="0"/>
                 <TextBox Margin="5 5 5 10" Padding="2"
                          Grid.Row="1" Grid.Column="0"
-                         Text="{Binding Path=V1, Mode=OneWayToSource}" />
+                         Text="{Binding Path=ValueOne, Mode=OneWayToSource}" />
 
                 <TextBlock Text="V2" 
                            Margin="5 5 5 5" 
                            Grid.Row="0" Grid.Column="1"/>
                 <TextBox Margin="5 5 5 10" Padding="2"
                          Grid.Row="1" Grid.Column="1" 
-                         Text="{Binding Path=V2, Mode=OneWayToSource}" />
+                         Text="{Binding Path=ValueTwo, Mode=OneWayToSource}" />
 
                 <TextBlock Text="V3" 
                            Margin="5 5 5 5" 
                            Grid.Row="0" Grid.Column="2"/>
                 <TextBox Margin="5 5 5 10" Padding="2"
                          Grid.Row="2" Grid.Column="2"
-                         Text="{Binding Path=V3, Mode=OneWayToSource}" />
+                         Text="{Binding Path=ValueThree, Mode=OneWayToSource}" />
 
                 <TextBlock Text="V4" 
                            Margin="5 5 5 5" 
                            Grid.Row="0" Grid.Column="3"/>
                 <TextBox Margin="5 5 5 10" Padding="2"
                          Grid.Row="2" Grid.Column="3" 
-                         Text="{Binding Path=V4, Mode=OneWayToSource}"/>
+                         Text="{Binding Path=ValueFour, Mode=OneWayToSource}"/>
 
                 <TextBlock Text="V5" 
                            Margin="5 5 5 5" 
                            Grid.Row="0" Grid.Column="4"/>
                 <TextBox Margin="5 5 5 10" Padding="2"
                          Grid.Row="2" Grid.Column="4"
-                         Text="{Binding Path=V5, Mode=OneWayToSource}" />
+                         Text="{Binding Path=ValueFive, Mode=OneWayToSource}" />
             </Grid>
             
             <Button Background="White" 

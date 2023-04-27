@@ -79,7 +79,7 @@ namespace UIWpfApp.ViewModel
 
         public int ValueOne
         {
-            get => UIInputs.ValueOne;
+            get => _valueOne;
             set
             {
                 _valueOne = value;
@@ -88,7 +88,7 @@ namespace UIWpfApp.ViewModel
         }
         public int ValueTwo
         {
-            get => UIInputs.ValueTwo;
+            get => _valueTwo;
             set
             {
                 _valueTwo = value;
@@ -97,7 +97,7 @@ namespace UIWpfApp.ViewModel
         }
         public int ValueThree
         {
-            get => UIInputs.ValueThree;
+            get => _valueThree;
             set
             {
                 _valueThree = value;
@@ -107,7 +107,7 @@ namespace UIWpfApp.ViewModel
 
         public int ValueFour
         {
-            get => UIInputs.ValueFour;
+            get => _valueFour;
             set
             {
                 _valueFour = value;
@@ -117,7 +117,7 @@ namespace UIWpfApp.ViewModel
 
         public int ValueFive
         {
-            get => UIInputs.ValueFive;
+            get => _valueFive;
             set
             {
                 _valueFive = value;
@@ -139,7 +139,6 @@ namespace UIWpfApp.ViewModel
         {
             var valuesList = new List<int> { ValueOne, ValueTwo, ValueThree, ValueFour, ValueFive };
             ValuesString = String.Join("-", valuesList);
-
         }
 
         public void UpdateDefinition(Action a)
